@@ -3,11 +3,11 @@ pipeline {
 
 		stages{
 			stage('Build'){
-				steps{}
+				steps{
+				 cmakeBuild buildType: 'Release', cleanBuild: true, installation: 'InSearchPath', steps: [[withCmake: true]
+				}
 			}
-			stage('Test'){
-				steps{}
-			}
+			
 		}
 
 }
